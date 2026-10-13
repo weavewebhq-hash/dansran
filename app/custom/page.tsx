@@ -1,15 +1,87 @@
 import DansranFooter from "@/components/dansran-footer"
 import DansranNavbar from "@/components/dansran-navbar"
 import DansranBreadcrumb from "@/components/ui/breadcrumb"
-import { TextBlurIn } from "@/components/ui/text-blur-in"
+
+const categories = [
+  ["Шинэ жилийн бэлэг", "Түнш, харилцагч, хамт олонд"],
+  ["Удирдлага / VIP бэлэг", "Удирдах түвшин, ТУЗ, хүндэт зочинд"],
+  ["Түншийн бэлэг", "Хамтын ажиллагаа, онцгой харилцаанд"],
+  ["Ойн баяр / Тусгай төсөл", "Ойн баяр, арга хэмжээ, нээлт болон онцгой захиалгад"],
+]
+
+const products = [
+  { name: "Эрлэг Номун Хааны Баг (Чойжин ламын сүм)", image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/att.TCNIc_d5qUEso-cTQ6b5-ysvIobm_hNl8vuo9N2BXaI-FhGt52ywuwzgmGJPDgo77mEnTuTGDz.webp" },
+  { name: "Талхан таваг", image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/841139243_1421046189445849_7291843786487351763_n-ICsPgGppK4uSLwbeCoeHLH3WmuXHEF.webp" },
+  { name: "Монгол гэр хүжний суурь", image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gerhujniisuuri-7ZoPGOX8ROV5yLa2MJd3jqzUtjLZc7.jpg" },
+  { name: "Монгол гутал үзэг балны сав", image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/37e54bd9-47ab-4b23-9e51-75996eacd588-ktAilRPDWXnpeLAzoif9GqrSDG4ZDw.jpg" },
+  { name: "Талын домбо", image: "/dansran-jug.png" },
+]
 
 export default function CustomPage() {
-  return <main className="min-h-screen bg-[#f6f4ef] px-5 py-6 text-[#0E6287] md:px-10 md:py-8">
-    <header className="mx-auto max-w-6xl"><DansranNavbar hideCustom current="custom" /><div className="mt-5"><DansranBreadcrumb current="Custom" /></div></header>
-    <section className="mx-auto max-w-6xl px-5 pb-20 pt-16 md:px-10 md:pb-28 md:pt-24"><div className="mt-16 grid gap-12 md:grid-cols-[0.9fr_1.1fr] md:items-end"><div><h1 className="max-w-xl text-6xl leading-[0.88] tracking-[-0.07em] md:text-8xl">Зөвхөн танай<br /><em className="font-serif font-normal">байгууллагад.</em></h1></div></div></section>
-    <section className="bg-[linear-gradient(180deg,#f6f4ef_0%,#dceff4_100%)] px-5 py-16 md:px-10 md:py-20"><div className="mx-auto max-w-6xl"><div className="flex items-end justify-between border-b border-[#0E6287]/20 pb-5"><div><p className="text-[10px] font-semibold uppercase tracking-[0.24em]">01 / Creative directions</p><h2 className="mt-5 text-5xl tracking-[-0.06em] md:text-7xl">Сэдвийн<br />чиглэлүүд</h2></div><span className="hidden text-[10px] uppercase tracking-[0.2em] md:block">05 directions</span></div><div className="mt-8 grid gap-x-10 md:grid-cols-2">{[["01","Компанийн түүх","Үүсэл, үнэ цэнэ, онцлог түүх"],["02","Ойн баяр","10, 20, 30 жил болон онцгой үйл явдал"],["03","Үйл ажиллагаа","Салбарын онцлог, ажиллах орчин, гол сэдэв"],["04","Нутаг орон","Говь, хангай, тал нутаг, тухайн бүсийн онцлог"],["05","Монгол соёл","Наадам, гэр, морь, ахуй, уламжлалт дүрслэл"]].map(([number,title,description]) => <div key={number} className="border-b border-[#0E6287]/20 py-6"><span className="text-xs text-[#0E6287]/60">{number}</span><div className="mt-3 flex items-center justify-between"><h3 className="text-2xl tracking-[-0.04em]">{title}</h3><img src="/dansran-mark-blue.png" alt="" className="size-5 object-contain" /></div><TextBlurIn className="mt-2 text-sm text-[#0E6287]/65" staggerDelay={0.02}>{description}</TextBlurIn></div>)}</div></div></section>
-    <section className="px-5 py-20 md:px-10 md:py-28"><div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2"><div><p className="text-[10px] font-semibold uppercase tracking-[0.24em]">02 / Make it yours</p><h2 className="mt-6 text-5xl leading-[0.92] tracking-[-0.06em] md:text-7xl">Деталь бүрт<br /><em className="font-serif font-normal">танай өнгө төрх.</em></h2></div><div className="grid grid-cols-2 gap-x-8 gap-y-5 self-end border-t border-[#0E6287]/20 pt-6 text-lg"><span>Зураглал</span><span>Өнгө</span><span>Мэндчилгээ</span><span>Захиалгат карт</span><span>Монгол / English тайлбар карт</span><span>Савлагаа</span></div></div></section>
-    <section className="px-5 py-16 md:px-10 md:py-20"><div className="mx-auto max-w-6xl"><p className="text-[10px] font-semibold uppercase tracking-[0.24em]">03 / From idea to gift</p><div className="mt-6 flex flex-col justify-between gap-8 md:flex-row md:items-end"><h2 className="text-5xl leading-[0.92] tracking-[-0.06em] md:text-7xl">Хамтдаа бүтээх зам.</h2><a href="mailto:hello@dansran.com?subject=Custom%20gifting" className="inline-flex items-center gap-4 rounded-full border border-[#0E6287] bg-[#0E6287] px-6 py-4 text-sm text-[#f6f4ef] transition-transform hover:-translate-y-1">Холбогдох <img src="/dansran-mark-blue.png" alt="" className="size-4 object-contain" /></a></div><div className="mt-12 grid grid-cols-2 gap-4 border-t border-[#0E6287]/20 pt-6 md:grid-cols-6">{["Танилцах","Сэдэв сонгох","Концепц","Баталгаажуулах","Үйлдвэрлэл","Хүргэлт"].map((step,index) => <div key={step}><span className="text-xs text-[#0E6287]/60">0{index + 1}</span><p className="mt-3 text-sm">{step}</p></div>)}</div></div></section>
-    <DansranFooter />
-  </main>
+  return (
+    <main className="min-h-screen bg-[#f6f4ef] px-5 py-6 text-[#0E6287] md:px-10 md:py-8">
+      <header className="mx-auto max-w-6xl">
+        <DansranNavbar hideCustom current="custom" />
+        <div className="mt-5"><DansranBreadcrumb current="Custom" /></div>
+      </header>
+
+      <section className="mx-auto max-w-6xl pb-20 pt-20 md:pb-28 md:pt-32">
+        <p className="text-[10px] font-semibold uppercase tracking-[0.24em]">Custom</p>
+        <h1 className="mt-6 max-w-3xl text-6xl leading-[0.9] tracking-[-0.07em] md:text-8xl">Захиалгат<br /><em className="font-serif font-normal">бүтээгдэхүүн</em></h1>
+        <p className="mt-8 max-w-xl text-xl leading-relaxed text-[#0E6287]/70 md:text-2xl">Танай байгууллагын хэрэгцээ, зориулалтад тохируулан тусгай бүтээгдэхүүн бүтээнэ.</p>
+      </section>
+
+      <section className="bg-[linear-gradient(180deg,#f6f4ef_0%,#dceff4_100%)] px-5 py-16 md:px-10 md:py-20">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.24em]">01 / Төслийн чиглэлүүд</p>
+          <div className="mt-8 grid gap-x-10 md:grid-cols-2">
+            {categories.map(([title, description], index) => (
+              <div key={title} className="border-b border-[#0E6287]/20 py-7">
+                <span className="text-xs text-[#0E6287]/55">0{index + 1}</span>
+                <h2 className="mt-4 text-2xl tracking-[-0.04em]">{title}</h2>
+                <p className="mt-2 text-sm leading-relaxed text-[#0E6287]/65">{description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-5 py-20 md:px-10 md:py-28">
+        <p className="text-[10px] font-semibold uppercase tracking-[0.24em]">02 / Бидний бүтээлүүд</p>
+        <div className="mt-8 grid gap-px bg-[#0E6287]/15 sm:grid-cols-2 lg:grid-cols-5">
+          {products.map((product, index) => (
+            <div key={product.name} className="flex min-h-72 flex-col justify-between bg-[#f6f4ef] p-4">
+              <div className="relative aspect-square overflow-hidden bg-[#dceff4]">
+                <img src={product.image} alt={product.name} className="size-full object-contain p-3 transition-transform duration-500 hover:scale-105" />
+              </div>
+              <div className="flex items-end justify-between gap-3 pt-5">
+                <h2 className="text-lg tracking-[-0.04em]">{product.name}</h2>
+                <span className="text-xs text-[#0E6287]/55">0{index + 1}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-[#0E6287] px-5 py-16 text-[#f6f4ef] md:px-10 md:py-24">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#AAE7FF]">03 / Хүсэлт илгээх</p>
+          <div className="mt-8 grid gap-12 md:grid-cols-[0.8fr_1.2fr]">
+            <div>
+              <h2 className="text-5xl leading-[0.92] tracking-[-0.06em] md:text-7xl">Хамтдаа<br /><em className="font-serif font-normal">бүтээе.</em></h2>
+              <p className="mt-7 max-w-sm leading-relaxed text-[#f6f4ef]/70">Хүссэн бүтээгдэхүүн, тоо ширхэг, хугацаагаа бичээд илгээгээрэй. Бид тантай эргэн холбогдоно.</p>
+            </div>
+            <form className="grid gap-5" action="mailto:info@dansran.mn" method="post" encType="text/plain">
+              <label className="grid gap-2 text-sm"><span>Нэр *</span><input required name="name" className="border-b border-[#f6f4ef]/35 bg-transparent px-0 py-3 outline-none placeholder:text-[#f6f4ef]/40" /></label>
+              <label className="grid gap-2 text-sm"><span>Байгууллага</span><input name="organization" className="border-b border-[#f6f4ef]/35 bg-transparent px-0 py-3 outline-none placeholder:text-[#f6f4ef]/40" /></label>
+              <label className="grid gap-2 text-sm"><span>Утас эсвэл и-мэйл *</span><input required name="contact" className="border-b border-[#f6f4ef]/35 bg-transparent px-0 py-3 outline-none placeholder:text-[#f6f4ef]/40" /></label>
+              <label className="grid gap-2 text-sm"><span>Таны хүсэлт *</span><textarea required name="request" placeholder="Ямар бүтээгдэхүүн, хэдэн ширхэг, хэзээ хэрэгтэй вэ?" rows={3} className="resize-none border-b border-[#f6f4ef]/35 bg-transparent px-0 py-3 outline-none placeholder:text-[#f6f4ef]/40" /></label>
+              <button type="submit" className="mt-3 w-fit rounded-full border border-[#f6f4ef] px-6 py-3 text-sm transition-colors hover:bg-[#f6f4ef] hover:text-[#0E6287]">Илгээх</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <DansranFooter />
+    </main>
+  )
 }
