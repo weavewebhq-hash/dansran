@@ -10,11 +10,11 @@ const categories = [
 ]
 
 const products = [
-  { name: "Хээт таваг", image: "/dansran-plate.png" },
-  { name: "Ёслолын домбо", image: "/dansran-jug.png" },
-  { name: "Чимэглэлийн тавиур", image: "/dansran-cakestand.jpg" },
-  { name: "Захиалгат аяга", image: "/dansran-icon.png" },
-  { name: "Монгол хээт таваг", image: "/dansran-plate.png" },
+  { name: "Эрлэг Номун Хааны Баг (Чойжин ламын сүм)", image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/att.TCNIc_d5qUEso-cTQ6b5-ysvIobm_hNl8vuo9N2BXaI-FhGt52ywuwzgmGJPDgo77mEnTuTGDz.webp" },
+  { name: "Талхан таваг", image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/841139243_1421046189445849_7291843786487351763_n-ICsPgGppK4uSLwbeCoeHLH3WmuXHEF.webp" },
+  { name: "Монгол гэр хүжний суурь", image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gerhujniisuuri-7ZoPGOX8ROV5yLa2MJd3jqzUtjLZc7.jpg" },
+  { name: "Монгол гутал үзэг балны сав", image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/37e54bd9-47ab-4b23-9e51-75996eacd588-ktAilRPDWXnpeLAzoif9GqrSDG4ZDw.jpg" },
+  { name: "Талын домбо", image: "/dansran-jug.png" },
 ]
 
 export default function CustomPage() {
