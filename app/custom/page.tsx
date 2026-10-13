@@ -9,7 +9,13 @@ const categories = [
   ["Ойн баяр / Тусгай төсөл", "Ойн баяр, арга хэмжээ, нээлт болон онцгой захиалгад"],
 ]
 
-const products = ["Бүтээгдэхүүн 1", "Бүтээгдэхүүн 2", "Бүтээгдэхүүн 3", "Бүтээгдэхүүн 4", "Бүтээгдэхүүн 5"]
+const products = [
+  { name: "Хээт таваг", image: "/dansran-plate.png" },
+  { name: "Ёслолын домбо", image: "/dansran-jug.png" },
+  { name: "Чимэглэлийн тавиур", image: "/dansran-cakestand.jpg" },
+  { name: "Захиалгат аяга", image: "/dansran-icon.png" },
+  { name: "Монгол хээт таваг", image: "/dansran-plate.png" },
+]
 
 export default function CustomPage() {
   return (
@@ -44,9 +50,14 @@ export default function CustomPage() {
         <p className="text-[10px] font-semibold uppercase tracking-[0.24em]">02 / Бидний бүтээсэн</p>
         <div className="mt-8 grid gap-px bg-[#0E6287]/15 sm:grid-cols-2 lg:grid-cols-5">
           {products.map((product, index) => (
-            <div key={product} className="flex min-h-44 flex-col justify-between bg-[#f6f4ef] p-5">
-              <span className="text-xs text-[#0E6287]/55">0{index + 1}</span>
-              <h2 className="text-xl tracking-[-0.04em]">{product}</h2>
+            <div key={product.name} className="flex min-h-72 flex-col justify-between bg-[#f6f4ef] p-4">
+              <div className="relative aspect-square overflow-hidden bg-[#dceff4]">
+                <img src={product.image} alt={product.name} className="size-full object-contain p-3 transition-transform duration-500 hover:scale-105" />
+              </div>
+              <div className="flex items-end justify-between gap-3 pt-5">
+                <h2 className="text-lg tracking-[-0.04em]">{product.name}</h2>
+                <span className="text-xs text-[#0E6287]/55">0{index + 1}</span>
+              </div>
             </div>
           ))}
         </div>
