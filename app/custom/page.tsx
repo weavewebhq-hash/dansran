@@ -47,7 +47,7 @@ export default function CustomPage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-5 py-20 md:px-10 md:py-28">
-        <p className="text-[10px] font-semibold uppercase tracking-[0.24em]">02 / Бидний бүтээсэн</p>
+        <p className="text-[10px] font-semibold uppercase tracking-[0.24em]">02 / Бидний бүтээлүүд</p>
         <div className="mt-8 grid gap-px bg-[#0E6287]/15 sm:grid-cols-2 lg:grid-cols-5">
           {products.map((product, index) => (
             <div key={product.name} className="flex min-h-72 flex-col justify-between bg-[#f6f4ef] p-4">
